@@ -77,7 +77,7 @@ public class Taxi_Service {
 
     // 승객 탑승
     public void add_person(){
-        System.out.println("택시 기본요금은 5000원이며, 1 거리당 2000원씩 추가됩니다.");
+        System.out.println("택시 기본요금은 5000원이며, 5 거리 초과 시, 1 거리 당 800원씩 추가됩니다.");
         System.out.print("탑승 승객 수 : ");
         int add_person = scanner.nextInt();
         System.out.print("택시 번호 : ");
@@ -101,14 +101,32 @@ public class Taxi_Service {
                 if(Taxi.get(b).getTaxi_state() == Taxi_State.NOT_DRIVE){  // 택시 상태가 일반인지 ?
 
                     if(speed > 0){
-                        int price = 5000 + 2000 * km;
-                        Taxi.get(b).setPrice(price);
 
-                        Taxi.get(b).setCurrent_num(add_person);
-                        Taxi.get(b).setGoal(goal);
-                        Taxi.get(b).setSpeed(speed);
-                        Taxi.get(b).setTaxi_state(Taxi_State.DRIVING);
-                        Taxi.get(b).showTaxiInfo();
+                        int oil = Taxi.get(b).getOil();
+
+                        if(oil > 10){
+
+                            int price = 0;
+
+                            if (km > 5)
+                                price = 5000 + 800 * (km-5);
+                            else
+                                price = 5000;
+
+                            Taxi.get(b).setPrice(price);
+
+                            Taxi.get(b).setCurrent_num(add_person);
+                            Taxi.get(b).setGoal(goal);
+                            Taxi.get(b).setSpeed(speed);
+                            Taxi.get(b).setTaxi_state(Taxi_State.DRIVING);
+                            Taxi.get(b).showTaxiInfo();
+
+                        }else{
+                            System.out.println("주유량이 부족합니다.");
+                            System.out.println("주유량을 추가한 후 승객 탑승을 해주세요.");
+                        }
+
+
                     }else {
                         System.out.println("잘못된 속도 값입니다.");
                         add_person();
