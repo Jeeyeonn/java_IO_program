@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="spring_basic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/spring_basic_jar</output-path>
+    <root id="archive" name="spring_basic.jar">
+      <element id="module-output" name="spring_basic" />
+    </root>
+  </artifact>
+</component>

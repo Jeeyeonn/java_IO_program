@@ -106,6 +106,8 @@ public class Taxi_Service {
 
                         Taxi.get(b).setCurrent_num(add_person);
                         Taxi.get(b).setGoal(goal);
+                        Taxi.get(b).setSpeed(speed);
+                        Taxi.get(b).setTaxi_state(Taxi_State.DRIVING);
                         Taxi.get(b).showTaxiInfo();
                     }else {
                         System.out.println("잘못된 속도 값입니다.");
