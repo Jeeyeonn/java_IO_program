@@ -24,9 +24,14 @@ public class Bus_Service {
         }else {
             System.out.print("몇 명이 탑승합니까? : ");
             int current_num = scanner.nextInt();
-            Bus_Model model = new Bus_Model(id, current_num);
-            Bus.put(bus_num++, model);
-            System.out.println("버스가 생성되었습니다.");
+            if(current_num > 30){
+                System.out.println("탑승 인원을 초과하였습니다.");
+                add_Bus();
+            }else{
+                Bus_Model model = new Bus_Model(id, current_num);
+                Bus.put(bus_num++, model);
+                System.out.println("버스가 생성되었습니다.");
+            }
         }
     }
 
