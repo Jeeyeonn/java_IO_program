@@ -1,4 +1,4 @@
-package Bus;
+package version_1.Bus;
 
 public enum Bus_State {
     DRIVING,

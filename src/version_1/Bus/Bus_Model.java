@@ -1,7 +1,5 @@
-package Bus;
+package version_1.Bus;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Bus_Model {

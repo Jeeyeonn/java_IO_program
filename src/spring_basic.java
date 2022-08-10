@@ -1,6 +1,5 @@
-import Bus.Bus_Model;
-import Bus.Bus_Service;
-import Taxi.Taxi_Service;
+import version_1.Bus.Bus_Service;
+import version_1.Taxi.Taxi_Service;
 
 import java.util.Scanner;
 
