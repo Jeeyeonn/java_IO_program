@@ -1,6 +1,7 @@
 <div align="center">
 
 ## 🧑🏻‍💻 JAVA 객체지향 설계 공부하기 🧑🏻‍💻 
+### [시연 영상 보러가기](https://youtu.be/_64Nea-9YQ8)
 <br>
 <br>
 
